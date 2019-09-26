@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "/git/ansible-role-azure-ansible"
+		},
+		{
+			"path": "/git/ansible-role-azure-cli"
+		},
+		{
+			"path": "/git/ansible-role-common"
+		}
+	],
+    "remoteAuthority": "wsl+Ubuntu",
+    "settings": {}
+}

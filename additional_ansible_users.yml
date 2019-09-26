@@ -6,8 +6,10 @@
 #  `ansible-playbook -i 10.2.3.4, additional_ansible_users.yml`
 #  `ansible-playbook -i host.suffix.com, additional_ansible_users.yml`
 
-- hosts: all
+- hosts: localhost
+  connection: local
   become: yes
+  gather_facts: no
   tasks:
     - name: Ensure ansible group exists
       group:
@@ -18,12 +20,14 @@
         name: "{{ item.id }}"
         comment: "{{ item.name }}"
         group: ansible
-#        generate_ssh_key: yes
-#        ssh_key_bits: 2048
-#        ssh_key_file: .ssh/id_rsa
+        generate_ssh_key: yes
+        ssh_key_bits: 2048
+        ssh_key_file: .ssh/id_rsa
         state: present
       loop:
         - { id: 'rita', name: 'Rita Hayworth' }
         - { id: 'sue',  name: 'Sue Perkins' }
         - { id: 'bob',  name: 'Bob Odenkirk' }
+  vars:
+    ansible_python_interpreter: "{{ ansible_playbook_python }}"
 ...

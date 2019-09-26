@@ -12,8 +12,8 @@
         ssh_key_bits: 2048
         ssh_key_file: .ssh/id_rsa
         state: present
-  loop:
-    - { id: 'rita', name: 'Rita Hayworth' }
-    - { id: 'sue',  name: 'Sue Perkins' }
-    - { id: 'bob',  name: 'Bob Odenkirk' }
+      loop:
+        - { id: 'rita', name: 'Rita Hayworth' }
+        - { id: 'sue',  name: 'Sue Perkins' }
+        - { id: 'bob',  name: 'Bob Odenkirk' }
 ...

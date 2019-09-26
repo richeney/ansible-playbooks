@@ -3,6 +3,10 @@
 - hosts: localhost
   become: yes
   tasks:
+    - name: Ensure ansible group exists
+      group:
+        name: ansible
+        state: present
     - name: Add users to the ansible group
       user:
         name: "{{ item.id }}"

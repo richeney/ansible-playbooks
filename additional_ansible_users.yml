@@ -1,6 +1,12 @@
 ---
 # Playbook to add additional users
-- hosts: localhost
+# Call with
+#  `ansible-playbook -i 127.0.0.1, additional_ansible_users.yml`
+#  `ansible-playbook -i localhost, additional_ansible_users.yml`
+#  `ansible-playbook -i 10.2.3.4, additional_ansible_users.yml`
+#  `ansible-playbook -i host.suffix.com, additional_ansible_users.yml`
+
+- hosts: all
   become: yes
   tasks:
     - name: Ensure ansible group exists

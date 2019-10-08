@@ -1,0 +1,20 @@
+---
+## Install additional configuration management software
+## You would probably do this in the image, but we'll use to prove ansible_local
+# Call with
+#  `ansible-playbook -i 127.0.0.1, config_mgmt.yml`
+#  `ansible-playbook -i localhost, config_mgmt.yml`
+#  `ansible-playbook -i 10.2.3.4, config_mgmt.yml`
+#  `ansible-playbook -i host.suffix.com, config_mgmt.yml`
+
+- hosts: localhost
+  connection: local
+  become: yes
+  gather_facts: no
+  roles:
+    - packer
+    - terraform
+  vars:
+    terraform_version: 0.12.9
+
+...

@@ -1,0 +1,11 @@
+---
+## Install docker and docker Python library
+
+- hosts: tag_docker_true
+  vars:
+    pip_install_packages:
+      - name: docker
+  roles:
+    - pip
+    - docker
+...

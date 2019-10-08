@@ -1,0 +1,6 @@
+---
+- src: darkwizard242.terraform
+  name: terraform
+- src: darkwizard242.packer
+  name: packer
+...

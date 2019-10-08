@@ -1,0 +1,14 @@
+---
+- src: https://github.com/richeney/ansible-role-common
+  name: common
+- src: https://github.com/richeney/ansible-role-azure-cli
+  name: azure_cli
+- src: https://github.com/richeney/ansible-role-azure-ansible
+  name: azure_ansible
+## - src: geerlingguy.pip
+  ## name: pip
+## - src: geerlingguy.docker
+  ## name: docker
+## - src: darkwizard242.terraform
+  ## name: terraform
+...
